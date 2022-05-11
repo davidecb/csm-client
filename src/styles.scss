@@ -1,0 +1,58 @@
+/**
+Agregue las clases globales como margenes, relleno, grid.
+
+NOTA PARA MICROFRONTENDS: las clases globales pueden afectar al estilado general de la aplicación.
+Las clases y estilos compartidos deberían ser obtenidos de un CDN por el ORQUESTADOR.
+
+Ej:
+
+.margin-32--bottom {
+  margin-bottom: 32px;
+}
+
+*/
+@import './assets/scss/fonts';
+@import './assets/scss/colors';
+@import 'react-datepicker/dist/react-datepicker';
+
+html {
+  box-sizing: border-box;
+  font-family: londrinaSolidRegular, -apple-system, BlinkMacSystemFont,
+    'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
+    'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  background: $background;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+ul,
+li,
+h1,
+h2,
+h3,
+p,
+button {
+  padding: 0;
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+.main-router-dom {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+

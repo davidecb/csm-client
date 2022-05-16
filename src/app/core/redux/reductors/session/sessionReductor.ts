@@ -4,16 +4,17 @@ import {
   SET_END_DATE,
   SET_START_DATE,
   SessionActionTypes,
-  VALIDATE_SESSION
+  VALIDATE_SESSION,
 } from '../../actions/session/SessionActionTypes';
 import { SessionState } from '../../models/SessionState';
+import { getWeekStart } from 'app/shared/utils/formaters';
 
 const initialState: SessionState = {
   session: {
     token: localStorage.getItem('jwtToken') || '',
     user: JSON.parse(localStorage.getItem('user') || '{}'),
   },
-  startDate: new Date(),
+  startDate: getWeekStart(),
   endDate: new Date(),
 };
 
@@ -29,7 +30,7 @@ export default function (
         session,
       };
     }
-    
+
     case LOGOUT_SESSION: {
       const session = action.payload;
       return {
@@ -37,7 +38,7 @@ export default function (
         session,
       };
     }
-    
+
     case VALIDATE_SESSION: {
       const session = action.payload;
       return {
@@ -45,7 +46,7 @@ export default function (
         session,
       };
     }
-    
+
     case SET_START_DATE: {
       const startDate = action.payload;
       return {
@@ -53,7 +54,7 @@ export default function (
         startDate,
       };
     }
-    
+
     case SET_END_DATE: {
       const endDate = action.payload;
       return {

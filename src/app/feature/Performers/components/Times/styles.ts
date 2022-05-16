@@ -1,9 +1,7 @@
 import { colors } from 'app/shared/components/Colors';
 import styled from 'styled-components';
 
-export const Wrapper = styled.div.attrs((props) => {
-
-})`
+export const Wrapper = styled.div.attrs((props) => {})`
   padding: 8px;
   width: 20%;
   background: none;
@@ -11,7 +9,7 @@ export const Wrapper = styled.div.attrs((props) => {
     if (isGoalReached) {
       return colors.golden_poppy;
     } else {
-      return colors.basic_red;      
+      return colors.basic_red;
     }
   }};
   font-size: 18px;
@@ -26,8 +24,8 @@ export const Wrapper = styled.div.attrs((props) => {
   }
 
   .goalContainer {
-    width: 50%;
+    width: 90px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
   }
 `;

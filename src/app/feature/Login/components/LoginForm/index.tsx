@@ -1,16 +1,12 @@
 import * as PropTypes from 'prop-types';
 import * as React from 'react';
 import * as Yup from 'yup';
-import {
-  Form,
-  LoginFormContainer,
-  SpanError,
-  Title
-} from './styles';
+import { Form, LoginFormContainer, Title } from './styles';
 import { FormikHelpers } from 'formik/dist/types';
 import { Input } from 'app/shared/components/Input';
 import { Login } from '../../models/Login';
 import { Session } from '../../models/Session';
+import { SpanError } from 'app/shared/components/SpanError';
 import { SubmitLoginButton } from '../SubmitLoginButton';
 import { useFormik } from 'formik';
 import { useState } from 'react';
@@ -37,7 +33,7 @@ export const LoginForm: React.FC<LoginFormProps> = ({
   initialValues = {
     username: '',
     password: '',
-  }
+  },
 }) => {
   const [wrongLogin, setWrongLogin] = useState(false);
   const [wrongLoginMsg, setWrongLoginMsg] = useState('');
@@ -65,12 +61,10 @@ export const LoginForm: React.FC<LoginFormProps> = ({
   });
 
   return (
-    <LoginFormContainer> 
+    <LoginFormContainer>
       <Form onSubmit={formik.handleSubmit}>
         <Title>Bienvenido</Title>
-        {wrongLogin && (
-          <SpanError>{wrongLoginMsg}</SpanError>
-        )}
+        {wrongLogin && <SpanError>{wrongLoginMsg}</SpanError>}
         <Input
           name="username"
           placeholder="Usuario"
@@ -81,7 +75,7 @@ export const LoginForm: React.FC<LoginFormProps> = ({
           <SpanError>{formik.errors.username}</SpanError>
         )}
         <Input
-          type='password'
+          type="password"
           name="password"
           placeholder="Contraseña"
           value={formik.values.password}
@@ -89,9 +83,9 @@ export const LoginForm: React.FC<LoginFormProps> = ({
         />
         {formik.touched.password && formik.errors.password && (
           <SpanError>{formik.errors.password}</SpanError>
-        )}   
+        )}
         <SubmitLoginButton />
-      </Form>     
+      </Form>
     </LoginFormContainer>
   );
 };

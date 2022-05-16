@@ -35,7 +35,7 @@ export const LoginFormContainer = styled.div`
 `;
 
 export const Title = styled.h2`
-  font-family:  londrinaSolidBlack; 
+  font-family: londrinaSolidBlack;
   position: relative;
   margin-top: 0px;
   text-align: center;
@@ -50,10 +50,4 @@ export const Form = styled.form`
   flex-flow: column;
   align-items: center;
   justify-content: center;
-`;
-
-export const SpanError = styled.span`
-  color: #f62d2d;
-  font-family: LondrinaSolidRegular;
-  font-size: 14px;
 `;

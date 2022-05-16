@@ -1,7 +1,10 @@
+import { Note } from './Note';
+
 interface PersonalInfo {
   performerName: string;
   location: string;
   performerShift: string;
+  id: string;
 }
 
 interface Totals {
@@ -15,7 +18,8 @@ interface Totals {
 }
 
 export interface PerformerTotals {
-  personalInfo: PersonalInfo,
-  time: Totals,
-  earnings: Totals,
+  personalInfo: PersonalInfo;
+  time: Totals;
+  earnings: Totals;
+  notes: Note[];
 }

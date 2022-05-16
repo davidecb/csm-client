@@ -6,7 +6,7 @@ export const colors = {
   basic_blue: '#001327',
   basic_green: '#84FF00',
   green_dark: 'green',
-  basic_red: '#ff907c',
+  basic_red: '#D0342C',
   red_dark: '#FF0005',
   background: 'black',
   basic_white: 'white',

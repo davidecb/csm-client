@@ -2,9 +2,9 @@ import * as PropTypes from 'prop-types';
 import * as React from 'react';
 import { FcCancel, FcOk } from 'react-icons/fc';
 import { PerformerConnect, Wrapper } from './styles';
-import { VscDebugDisconnect } from 'react-icons/vsc';
 import { Performer } from '../../models/Performer';
 import { Select } from 'app/shared/components/Select';
+import { VscDebugDisconnect } from 'react-icons/vsc';
 import { useState } from 'react';
 
 interface PersonalInfoProps {

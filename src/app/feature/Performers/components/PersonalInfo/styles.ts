@@ -15,6 +15,7 @@ export const Wrapper = styled.div`
   .icon {
     width: 25px;
     height: 25px;
+    margin: 5px;
     cursor: pointer;
   }
 `;
